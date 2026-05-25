@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
+    <title>Azure - Task Manager</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,15 +15,14 @@
   </head>
   <body>
     <main class="todo-card">
-      <h1 id="app_title">Azure - Task Manager</h1>
-      <div class="input_wrapper">
-        <input type="text" id="new_task" placeholder="Add new task" />
-        <button id="new_task_btn" onclick="addTask()">+</button>
+      <h1 id="app-title">Azure - Task Manager</h1>
+
+      <div class="input-wrapper">
+        <input type="text" id="new-task" placeholder="Add new task..." />
+        <button id="add-btn">+</button>
       </div>
 
-      <div class="task_wrapper">
-        <ul id="user_task"></ul>
-      </div>
+      <ul id="task-list"></ul>
     </main>
   </body>
 </html>

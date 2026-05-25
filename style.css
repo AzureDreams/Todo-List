@@ -1,6 +1,9 @@
-#app_title {
+body {
   font-family: "Poppins", sans-serif;
-  font-weight: normal;
-  color: rgb(50, 50, 154);
-  text-align: center;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
