@@ -12,24 +12,24 @@ addBtn.addEventListener("click",addTask); // add event listener to listen for cl
 function addTask (){
 
   if (userInput.value.trim() === "") return; // dont accept empty strings
+  const taskText =userInput.value.trim();
   //Create list item
   const listItem = document.createElement("li");
-    listItem.textContent = userInput.value; // pull whatever user typed 
+    listItem.textContent = taskText; // pull whatever user typed 
     taskList.append(listItem); // append or show the list item on the page
-    allTasks.push(userInput.value); //pushes the task into 
+    allTasks.push(taskText); //pushes the task into array
+    
+    userInput.value = "";  //Clear input after each task entered
     
    //Create delete button
   const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "🗑️"; // create icon
      deleteBtn.classList.add("delete-btn"); // create class for the button to style later
      listItem.appendChild(deleteBtn) // append puts the button on dom so we can see it visually
-
-
-     
-      userInput.value = "";  //Clear input after each task entered
-      deleteBtn.addEventListener("click", ()=>{
+      
+    deleteBtn.addEventListener("click", ()=>{ // add event listener to delete button
     listItem.remove();
-   allTasks = allTasks.filter(item => item !== listItem);
+   allTasks = allTasks.filter(item => item !== taskText);
     
   });
 
